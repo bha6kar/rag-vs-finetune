@@ -10,4 +10,4 @@ Held-out test set: 17 questions. Judge: gpt-5.4-mini (correct + faithful), same 
 | gpt-5.4-mini, closed-book (no fine-tune) | 7/17 (41%) | 12/17 (71%) |
 | Claude Haiku 4.5, closed-book (no fine-tune) | 2/17 (12%) | 14/17 (82%) |
 | Qwen2.5-7B, closed-book (no fine-tune) | 1/17 (6%) | 15/17 (88%) |
-| Qwen2.5-7B, fine-tuned, closed-book | 3/17 (18%) | 5/17 (29%) |
+| Qwen2.5-7B, fine-tuned, closed-book | 4/17 (24%) | 5/17 (29%) |

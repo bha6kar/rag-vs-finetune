@@ -23,9 +23,10 @@ def main() -> None:
         "--model", LOCAL_BASE,
         "--train",
         "--data", str(DATA),
-        "--iters", "200",
+        "--iters", "400",
         "--batch-size", "4",
-        "--num-layers", "8",
+        "--num-layers", "16",
+        "--learning-rate", "1e-5",
         "--fine-tune-type", "lora",
         "--adapter-path", LOCAL_ADAPTER,
     ]
