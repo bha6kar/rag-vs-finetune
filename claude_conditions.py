@@ -23,47 +23,14 @@ from config import BAKEOFF, CLOSED_BOOK_SYSTEM, RAG_CONFIG, WORK
 CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "anthropic/claude-haiku-4.5")
 RESULTS = WORK / "results.json"
 
-# The bake-off's exact answer prompt, so claude_rag mirrors the RAG pipeline.
-RAG_PROMPT = """You are a careful financial-document QA assistant.
-Answer the question using ONLY the provided context. If the answer is not
-present in the context, reply exactly: Not in document.
-
-Be concise. When the answer is a number, include the unit and the period.
-When citing, mention the section name.
-
-Question: {question}
-Context: {context}
-Answer:"""
+# RAG prompt and context reconstruction are shared with eval_all.py.
+RAG_PROMPT = E.RAG_PROMPT
+rag_context = E.rag_context
 
 
 def openrouter() -> OpenAI:
     key = (Path.home() / ".secrets" / "openrouter_api_key").read_text().strip()
     return OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key)
-
-
-def _retrieved_map(doc: str) -> dict:
-    path = BAKEOFF / "results" / f"runs_{doc}_{RAG_CONFIG}_scored.jsonl"
-    out = {}
-    for line in path.read_text().splitlines():
-        if line.strip():
-            r = json.loads(line)
-            out[r["id"]] = r["retrieved"]
-    return out
-
-
-def _chunks(doc: str) -> dict:
-    # Normalize ids to str: the chunk store and the runs' retrieved indices can
-    # be int or str across files, so key everything by str to match reliably.
-    path = BAKEOFF / "results" / f"baseline_chunks_{doc}_{RAG_CONFIG}.jsonl"
-    return {str(c["id"]): c["text"]
-            for c in (json.loads(l) for l in path.read_text().splitlines() if l.strip())}
-
-
-def rag_context(q: dict) -> str:
-    """Reconstruct the exact context the tuned gpt-5.4-mini RAG pipeline used."""
-    ids = _retrieved_map(q["doc"]).get(q["id"], [])
-    chunks = _chunks(q["doc"])
-    return "\n\n".join(chunks[str(i)] for i in ids if str(i) in chunks)
 
 
 def gen_closedbook(client):

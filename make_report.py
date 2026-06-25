@@ -24,16 +24,17 @@ GRID = "#e5e7eb"
 LABELS = {
     "rag":         "gpt-5.4-mini + RAG (retrieval)",
     "claude_rag":  "Claude Haiku 4.5 + RAG (retrieval)",
+    "local_rag":   "Qwen2.5-7B + RAG (retrieval)",
     "base_azure":  "gpt-5.4-mini, closed-book (no fine-tune)",
     "claude_base": "Claude Haiku 4.5, closed-book (no fine-tune)",
     "ft_azure":    "gpt-5.4-mini, fine-tuned, closed-book",
-    "base_local":  "Qwen2.5-3B, closed-book (no fine-tune)",
-    "ft_local":    "Qwen2.5-3B, fine-tuned, closed-book",
+    "base_local":  "Qwen2.5-7B, closed-book (no fine-tune)",
+    "ft_local":    "Qwen2.5-7B, fine-tuned, closed-book",
 }
-ORDER = ["rag", "claude_rag", "base_azure", "claude_base", "ft_azure", "base_local", "ft_local"]
+ORDER = ["rag", "claude_rag", "local_rag", "base_azure", "claude_base", "ft_azure", "base_local", "ft_local"]
 COLORS = {
-    "rag": "#065f46", "claude_rag": "#047857", "base_azure": "#fca5a5",
-    "claude_base": "#f0abfc", "ft_azure": "#2563eb",
+    "rag": "#065f46", "claude_rag": "#047857", "local_rag": "#10b981",
+    "base_azure": "#fca5a5", "claude_base": "#f0abfc", "ft_azure": "#2563eb",
     "base_local": "#fdba74", "ft_local": "#1d4ed8",
 }
 

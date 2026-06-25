@@ -92,9 +92,64 @@ def gen_mlx(adapter):
              {"role": "user", "content": q["question"]}],
             tokenize=False, add_generation_prompt=True)
         try:
-            return generate(model, tok, prompt=prompt, max_tokens=200, verbose=False).strip()
+            return generate(model, tok, prompt=prompt, max_tokens=512, verbose=False).strip()
         except TypeError:
-            return generate(model, tok, prompt, max_tokens=200).strip()
+            return generate(model, tok, prompt, max_tokens=512).strip()
+    return g
+
+
+# ---- RAG context (shared with claude_conditions.py) -------------------------
+
+# The bake-off's exact answer prompt, so any model's RAG condition mirrors it.
+RAG_PROMPT = """You are a careful financial-document QA assistant.
+Answer the question using ONLY the provided context. If the answer is not
+present in the context, reply exactly: Not in document.
+
+Be concise. When the answer is a number, include the unit and the period.
+When citing, mention the section name.
+
+Question: {question}
+Context: {context}
+Answer:"""
+
+
+def _retrieved_map(doc):
+    path = BAKEOFF / "results" / f"runs_{doc}_{RAG_CONFIG}_scored.jsonl"
+    out = {}
+    for line in path.read_text().splitlines():
+        if line.strip():
+            r = json.loads(line)
+            out[r["id"]] = r["retrieved"]
+    return out
+
+
+def _chunks(doc):
+    path = BAKEOFF / "results" / f"baseline_chunks_{doc}_{RAG_CONFIG}.jsonl"
+    return {str(c["id"]): c["text"]
+            for c in (json.loads(l) for l in path.read_text().splitlines() if l.strip())}
+
+
+def rag_context(q):
+    """Reconstruct the exact context the tuned gpt-5.4-mini RAG pipeline used."""
+    ids = _retrieved_map(q["doc"]).get(q["id"], [])
+    chunks = _chunks(q["doc"])
+    return "\n\n".join(chunks[str(i)] for i in ids if str(i) in chunks)
+
+
+def gen_mlx_rag(adapter):
+    """Local model answering WITH the same retrieved context as the RAG pipeline."""
+    from mlx_lm import generate, load
+    model, tok = load(LOCAL_BASE, adapter_path=adapter)
+
+    def g(q):
+        prompt = tok.apply_chat_template(
+            [{"role": "user", "content": RAG_PROMPT.format(
+                question=q["question"], context=rag_context(q))}],
+            tokenize=False, add_generation_prompt=True)
+        try:
+            return generate(model, tok, prompt=prompt, max_tokens=512, verbose=False).strip()
+        except TypeError:
+            return generate(model, tok, prompt, max_tokens=512).strip()
     return g
 
 
@@ -162,6 +217,8 @@ def main():
             rows = run_rag(qs)
         elif cond == "base_local":
             rows = run_generated(cond, gen_mlx(None), qs, client)
+        elif cond == "local_rag":
+            rows = run_generated(cond, gen_mlx_rag(None), qs, client)
         elif cond == "ft_local":
             rows = run_generated(cond, gen_mlx(LOCAL_ADAPTER), qs, client)
         elif cond == "base_azure":

@@ -15,8 +15,9 @@ HERE = Path(__file__).resolve().parent
 BAKEOFF = HERE / "bakeoff"
 WORK = HERE / "work"
 
-# Local (free, Apple Silicon) base. 48 GB M4 Pro can also run the 7B-4bit.
-LOCAL_BASE = os.environ.get("LOCAL_BASE", "mlx-community/Qwen2.5-3B-Instruct-4bit")
+# Local (free, Apple Silicon) base. 7B-4bit runs comfortably on a 48 GB M4 Pro
+# and is a far better grounded extractor than 3B (3B abstains on long context).
+LOCAL_BASE = os.environ.get("LOCAL_BASE", "mlx-community/Qwen2.5-7B-Instruct-4bit")
 LOCAL_ADAPTER = str(WORK / "mlx_adapter")
 
 # Hosted (paid) base: the SAME model the RAG side used, for an exact comparison.

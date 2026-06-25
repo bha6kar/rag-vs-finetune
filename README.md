@@ -12,22 +12,23 @@ This is the experiment behind the write-up. The retrieval pipelines it compares 
 |---|---|---|
 | gpt-5.4-mini + RAG | 94% | 100% |
 | Claude Haiku 4.5 + RAG | 88% | 76% |
+| Qwen2.5-7B + RAG | 65% | 88% |
 | gpt-5.4-mini, closed-book | 41% | 71% |
 | Claude Haiku 4.5, closed-book | 12% | 82% |
-| Qwen2.5-3B, closed-book | 6% | 94% |
-| Qwen2.5-3B, fine-tuned, closed-book | 0% | 18% |
+| Qwen2.5-7B, closed-book | 6% | 88% |
+| Qwen2.5-7B, fine-tuned, closed-book | 18% | 29% |
 
 Read-out:
 
-- RAG lifts every model on the same retrieved context: gpt-5.4-mini 41 to 94, Claude 12 to 88.
-- Fine-tuning the small model closed-book on the documents made it **worse**: 0% correct, faithfulness collapsed from 94% to 18%. It memorised the 37 training answers and fabricated on held-out questions, the failure Gekhman et al. (arxiv 2405.05904) describe.
+- RAG lifts every model on the same retrieved context: gpt-5.4-mini 41 to 94, Claude 12 to 88, and the open Qwen2.5-7B 6 to 65. The knowledge was never in the weights; it was in the documents.
+- Fine-tuning the open model closed-book on the documents made it **worse, not better**: correctness stayed low (18%) while faithfulness collapsed from 88% to 29%. It memorised the 37 training answers and fabricated confidently on held-out questions, the failure Gekhman et al. (arxiv 2405.05904) describe.
 - There is no fine-tuned-Claude row because Anthropic does not offer fine-tuning of Claude. For Claude, RAG is the only knowledge lever.
 
 The training set is deliberately tiny (37 questions). That is the point: knowledge fine-tuning needs a large curated corpus to even compete with RAG, and with a small set it does damage. Fine-tune for behaviour and format; retrieve for what the model needs to know.
 
 ## What it does
 
-The fine-tune trains a model closed-book (question to ground-truth answer, no context) on 37 of the 54 finance questions, then scores the 17 held-out questions across six conditions, all graded by the same gpt-5.4-mini judge on correctness and faithfulness. RAG uses the same retrieved context the bake-off's tuned pipeline used. Generation for the open model is a local LoRA via MLX on Apple Silicon; the hosted models go through Azure OpenAI (judge and gpt-5.4-mini) and OpenRouter (Claude).
+The fine-tune trains a model closed-book (question to ground-truth answer, no context) on 37 of the 54 finance questions, then scores the 17 held-out questions across seven conditions, all graded by the same gpt-5.4-mini judge on correctness and faithfulness. RAG uses the same retrieved context the bake-off's tuned pipeline used, so any model's RAG condition is directly comparable. The open model is Qwen2.5-7B-Instruct, run locally (LoRA fine-tune and inference) via MLX on Apple Silicon; the hosted models go through Azure OpenAI (judge and gpt-5.4-mini) and OpenRouter (Claude).
 
 ## Files
 
