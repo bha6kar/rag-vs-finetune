@@ -1,0 +1,11 @@
+[project]
+name = "finetune-experiment"
+version = "0.1.0"
+description = "MLX LoRA schema-adherence fine-tune on Apple Silicon, scored against the RAG bake-off baseline"
+requires-python = ">=3.11"
+# Apple Silicon only: MLX uses the Mac's unified-memory GPU. No CUDA, no bitsandbytes.
+dependencies = [
+    "matplotlib>=3.11.0",
+    "mlx-lm>=0.18",
+    "openai>=1.40",
+]

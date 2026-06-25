@@ -1,0 +1,872 @@
+{
+  "rag": {
+    "rows": [
+      {
+        "id": "L3",
+        "doc": "apple",
+        "bucket": "lookup",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M3",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M5",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M6",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M7",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M9",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M10",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "N6",
+        "doc": "apple",
+        "bucket": "numeric_table",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BL1",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BL4",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM1",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM5",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM6",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB01279",
+        "doc": "amd",
+        "bucket": "numeric_table",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00757",
+        "doc": "amd",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00517",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00678",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "(RAG pipeline answer)",
+        "correct": 0,
+        "faithful": 1
+      }
+    ],
+    "n": 17,
+    "correct": 16,
+    "faithful": 17,
+    "acc": 0.9411764705882353,
+    "faith": 1.0
+  },
+  "base_azure": {
+    "rows": [
+      {
+        "id": "L3",
+        "doc": "apple",
+        "bucket": "lookup",
+        "answer": "Apple\u2019s corporate headquarters is in **Cupertino, California, USA**.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M3",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M5",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Apple announced several new hardware products in Q4 fiscal 2024, including the iPhone 16 lineup, new Apple Watch models, and new AirPods.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M6",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M7",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Apple\u2019s effective tax rate was higher in fiscal 2024 mainly because of changes in the geographic mix of earnings and the effect of non-deductible items, including the impact of Apple\u2019s foreign earnings and certain tax law changes. In other words, more of Apple\u2019s profit was taxed at less favorable rates in 2024 than in 2023.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "M9",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Apple will adopt **ASU 2023-08** for crypto assets **beginning in its fiscal year 2026**.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "M10",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Apple measures foreign exchange risk on its derivative positions using a **Value-at-Risk (VaR)** model, which estimates potential losses from changes in exchange rates over a specified time horizon and confidence level. The disclosed **maximum one-day loss is $100 million**.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "N6",
+        "doc": "apple",
+        "bucket": "numeric_table",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BL1",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "According to Berkshire Hathaway\u2019s 2024 10-K, the named executive officers and their roles are:\n\n- **Warren E. Buffett** \u2014 **Chairman of the Board and Chief Executive Officer**\n- **Gregory E. Abel** \u2014 **Vice Chairman, Non-Insurance Operations**\n- **Ajit Jain** \u2014 **Vice Chairman, Insurance Operations**\n- **Marc D. Hamburg** \u2014 **Senior Vice President and Chief Financial Officer**\n- **Jonathan A. Brandt** \u2014 **Vice President and Controller**",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BL4",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "Berkshire Hathaway\u2019s total revenues for the year ended December 31, 2024 were **$371.4 billion**.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM1",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Berkshire\u2019s underwriting business is made up of its insurance subsidiaries, chiefly:\n\n- GEICO\n- General Re\n- Berkshire Hathaway Reinsurance Group\n- Berkshire Hathaway Primary Group\n\nIts long-term underwriting goal is to **achieve an underwriting profit over time, with no cost to Berkshire for holding the insurance \u201cfloat.\u201d**",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM5",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "The 2024 chairman\u2019s letter says the five Japanese trading-company investments are financed with matched yen-denominated borrowings, meaning the currency exposure is largely offset because the debt is in the same currency as the investments.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM6",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Berkshire discloses that BNSF is exposed to:\n\n- **Regulatory exposure:** environmental, safety, labor, and other transportation regulations that can require significant compliance costs, operational changes, and potential liabilities.\n- **Coal-revenue exposure:** a meaningful portion of BNSF\u2019s freight revenue comes from coal, so declines in coal demand and shipments can reduce BNSF\u2019s revenue and earnings.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB01279",
+        "doc": "amd",
+        "bucket": "numeric_table",
+        "answer": "Operations brought in the most cash flow for AMD in FY22.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00757",
+        "doc": "amd",
+        "bucket": "multi_section",
+        "answer": "Yes. In FY22, AMD reported customer concentration, noting that a substantial portion of its revenue was derived from a limited number of customers.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00517",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB00678",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "Gross margin is not a very useful metric for Boeing.\n\nBoeing is a large aerospace and defense manufacturer with a mix of long-term contracts, defense programs, services, and program accounting effects. For companies like this, gross margin can be distorted by:\n- program mix and accounting estimates,\n- long production cycles,\n- abnormal charges and restructuring,\n- defense contract structures that don\u2019t map cleanly to standard manufacturing gross margin.\n\nSo while you can look at gross margin trends, it is not the best measure of Boeing\u2019s operating health or whether the business is improving. For Boeing, operating margin, cash flow, backlog, and program performance are generally more informative.\n\nAs of FY2022, I would not say Boeing had a clearly improving gross margin profile in a way that is especially meaningful.",
+        "correct": 0,
+        "faithful": 1
+      }
+    ],
+    "n": 17,
+    "correct": 7,
+    "faithful": 12,
+    "acc": 0.4117647058823529,
+    "faith": 0.7058823529411765
+  },
+  "base_local": {
+    "rows": [
+      {
+        "id": "L3",
+        "doc": "apple",
+        "bucket": "lookup",
+        "answer": "Apple's corporate headquarters is located in Cupertino, California.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M3",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M5",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M6",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M7",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M9",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M10",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "N6",
+        "doc": "apple",
+        "bucket": "numeric_table",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BL1",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BL4",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BM1",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Berkshire Hathaway's underwriting business is made up of various subsidiaries including GEICO, Burlington, and others. The long-term underwriting goal is to maintain underwriting income neutrality.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM5",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BM6",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB01279",
+        "doc": "amd",
+        "bucket": "numeric_table",
+        "answer": "To answer this accurately, I would need specific financial data for AMD's cash flow activities in fiscal year 2022. Without access to this data, I cannot provide a definitive answer regarding which activity brought in the most cash flow or lost the least. I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB00757",
+        "doc": "amd",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB00517",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "I don't know.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB00678",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "I don't know. Boeing's financial metrics are complex and can change significantly from year to year due to factors such as production volumes, cost structures, and market conditions. Gross margin alone may not fully capture its financial health.",
+        "correct": 0,
+        "faithful": 1
+      }
+    ],
+    "n": 17,
+    "correct": 1,
+    "faithful": 16,
+    "acc": 0.058823529411764705,
+    "faith": 0.9411764705882353
+  },
+  "ft_local": {
+    "rows": [
+      {
+        "id": "L3",
+        "doc": "apple",
+        "bucket": "lookup",
+        "answer": "Apple's corporate headquarters is located in California.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M3",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Greater than 25% increase in both R&D and SG&A in 2024 vs 2023. The increase was primarily driven by higher spending on both areas to drive innovation and improve efficiencies, respectively.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "M5",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Two new Apple silicon Macs and the Pro version of iPad were announced.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "M6",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Services revenue is not specified to show any particular driver for the year-over-year increase in fiscal 2024.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M7",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "A low effective tax rate in 2024 vs 2023.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "M9",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Two brightlands / AUM as of September 30.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "M10",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Apple does not publicly disclose the maximum one-day loss for its foreign exchange (FX) exposures. The specific methods and maximum losses are considered sensitive and are not frequently disclosed.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "N6",
+        "doc": "apple",
+        "bucket": "numeric_table",
+        "answer": "$72,519 million.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BL1",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "The 2024 10-K was not specified, and thus the specific named executive officers and their roles could not be determined.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BL4",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "$1,155,865 million (i.e. about $1.16 trillion).",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM1",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Berkshire's underwriting business is made up of several insurance subsidiaries, including Berkshire's auto, workers' compensation, and other specialty insurance operations. Berkshire has a long-term underwriting goal of earning a stable, above-average rate of return on invested premiums.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM5",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "The 2024 chairman's letter disclosed that as of December 31, 2024, the total unrealized loss on these investments was $22.3 million.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM6",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Berkshire has not disclosed specific regulatory and tax-loss-recovery exposures for BNSF.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "FB01279",
+        "doc": "amd",
+        "bucket": "numeric_table",
+        "answer": "To answer this directly: In 2022, the **financing** activities is the area that brought in the most cash (lost the least, essentially raised the most), with the capital raise and other investing activities involved.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "FB00757",
+        "doc": "amd",
+        "bucket": "multi_section",
+        "answer": "Customers are not a publicly disclosed metric that AMD reports.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "FB00517",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "Higher percentages of Boeing's FY2022 net sales are from the aircraft and aircraft parts categories.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "FB00678",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "Boeing's gross margin percentage is not publicly disclosed and can be affected by the level of product diversity, the effectiveness of expense management, and the complexity of their products and production processes. As of FY2022, without access to the specific metrics or a direct answer to the question of improvement in the gross margin profile (which is not a standard or widely reported metric for the aerospace and defense industry), it is not possible to determine if Boeing's profile is improving.",
+        "correct": 0,
+        "faithful": 0
+      }
+    ],
+    "n": 17,
+    "correct": 0,
+    "faithful": 3,
+    "acc": 0.0,
+    "faith": 0.17647058823529413
+  },
+  "claude_base": {
+    "rows": [
+      {
+        "id": "L3",
+        "doc": "apple",
+        "bucket": "lookup",
+        "answer": "Apple's corporate headquarters is located in Cupertino, California, USA. Specifically, it's at Apple Park (also known as the \"spaceship\" campus) in Cupertino.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M3",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nTo answer this question accurately, I would need access to specific financial documents or statements for 2024 and 2023, such as a company's annual report (10-K), quarterly earnings reports (10-Q), or investor presentations that detail R&D and SG&A expenses and management's discussion of the drivers behind any changes.\n\nIf you have access to such documents, please share them and I'll be happy to help analyze the changes.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M5",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't have access to Apple's specific announcements from Q4 fiscal 2024. To get accurate information about the hardware products Apple announced during that period, I recommend checking:\n\n- Apple's official press releases\n- Apple's quarterly earnings reports and conference call transcripts\n- Financial documents from their investor relations website\n\nThis will ensure you have the most current and accurate information about their product announcements.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M6",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nTo answer this question accurately, I would need access to a specific company's financial documents or earnings reports for fiscal 2024. Different companies have different drivers for their Services revenue growth, which could include factors like increased customer adoption, price increases, expansion of service offerings, improved retention, or acquisitions. Please provide the specific financial documents or company name you're asking about.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M7",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nTo answer this question accurately, I would need access to Apple's specific financial disclosures and tax footnotes from their fiscal 2024 and 2023 financial statements, which detail the components of their effective tax rate and any changes in tax positions, jurisdictional matters, or other factors that affected the rate year-over-year.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M9",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nTo provide accurate information about Apple's specific planned accounting standard adoptions and timelines, I would need access to their current SEC filings (such as 10-K or 10-Q reports) or investor relations announcements, which contain their accounting policy disclosures and forward-looking statements about regulatory changes.\n\nI'd recommend checking Apple's latest 10-K filing on the SEC website or contacting their investor relations department for the most current information.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "M10",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nWhile Apple likely uses standard financial metrics to measure foreign exchange risk on derivatives (such as Value-at-Risk, sensitivity analysis, or delta/gamma measures), I don't have access to Apple's specific disclosure regarding their maximum one-day loss methodology or the actual figure they report.\n\nTo find this information, you would need to review Apple's:\n- Form 10-K (Annual Report)\n- Form 10-Q (Quarterly Report)\n- Financial statements and notes on derivative instruments and hedging activities\n\nThese documents typically contain detailed disclosures about FX risk management and VaR or stress-testing results.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "N6",
+        "doc": "apple",
+        "bucket": "numeric_table",
+        "answer": "I don't know.\n\nI don't have access to specific financial documents for fiscal 2024. To find cash generated by operating activities, you would need to check the company's cash flow statement in their annual report (Form 10-K for US companies) or financial statements for fiscal 2024.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BL1",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "I don't have access to Berkshire Hathaway's 2024 10-K filing. To get the accurate list of named executive officers and their roles, you would need to:\n\n1. Visit the SEC's EDGAR database (sec.gov)\n2. Search for Berkshire Hathaway Inc.'s 2024 10-K filing\n3. Look in the \"Executive Officers and Directors\" section or the proxy statement (DEF 14A)\n\nAlternatively, you can visit Berkshire Hathaway's investor relations website directly.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BL4",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "I don't know.\n\nMy training data has a cutoff date and does not include Berkshire Hathaway's 2024 financial results. To find this information, I recommend checking Berkshire Hathaway's official SEC filings (10-K) or investor relations website.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BM1",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "# Berkshire's Insurance Subsidiaries\n\nBerkshire Hathaway's main insurance subsidiaries include:\n\n- **GEICO** (auto insurance)\n- **National Indemnity** (reinsurance and specialty insurance)\n- **Berkshire Hathaway Reinsurance** (reinsurance)\n- **Berkshire Hathaway Primary Group** (primary insurance)\n- **Alleghany** (property and casualty insurance, acquired in 2023)\n\n## Long-Term Underwriting Goal\n\nBerkshire's primary underwriting goal is to achieve **underwriting profits** (premiums earned exceeding claims paid and expenses), rather than relying on investment returns from insurance float to drive results. \n\nMore specifically, the company aims to:\n- Write business at a profit or break-even\n- Build insurance float economically and organically\n- Generate sustainable underwriting earnings over time\n\nWarren Buffett has emphasized that while the investment returns on float are important, achieving underwriting profitability demonstrates the true strength of the insurance operations.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM5",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nI don't have access to specific 2024 chairman's letters or their detailed disclosures about Japanese trading-company investments and matched yen-denominated borrowings. To answer this question accurately, I would need to review the actual document you're referring to.\n\nIf you could share the relevant excerpt or document, I'd be happy to help you understand it.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "BM6",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "# BNSF Regulatory and Coal-Revenue Exposures\n\nBased on Berkshire Hathaway's disclosures about BNSF (Burlington Northern Santa Fe), the key exposures include:\n\n## Regulatory Exposures\n- **Rate regulation**: BNSF is subject to Surface Transportation Board (STB) regulation, which limits its ability to raise rates and affects profitability\n- **Operating requirements**: Compliance with federal railroad safety, environmental, and labor regulations\n- **Capital intensity**: Regulated returns may not fully cover necessary infrastructure investments\n\n## Coal-Revenue Exposures\n- **Coal transportation dependency**: BNSF has historically been a major coal carrier, with coal shipments representing a significant portion of its freight revenues\n- **Declining coal demand**: Coal traffic has faced structural headwinds from:\n  - Shift away from coal-fired power generation\n  - Environmental regulations limiting coal use\n  - Transition to renewable energy sources\n- **Revenue volatility**: Exposure to commodity price cycles and utility fuel-switching decisions\n\nThese exposures reflect the challenges of being a major railroad serving the coal industry during an energy transition, though BNSF has diversified into other freight categories (intermodal, automotive, industrial products, etc.) to mitigate this risk.\n\nIf you need specific quantitative disclosures from a particular year, please provide the document or timeframe.",
+        "correct": 1,
+        "faithful": 0
+      },
+      {
+        "id": "FB01279",
+        "doc": "amd",
+        "bucket": "numeric_table",
+        "answer": "I don't know.\n\nTo answer this question accurately, I would need to see AMD's cash flow statement from their FY22 financial documents, which I don't have access to in our conversation. While I have general knowledge about AMD as a company, I cannot recall the specific cash flow figures from their 2022 fiscal year financial statements with confidence.\n\nI'd recommend checking AMD's 10-K filing or annual report for FY2022 to find their statement of cash flows, which breaks down cash flows from operations, investing, and financing activities.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB00757",
+        "doc": "amd",
+        "bucket": "multi_section",
+        "answer": "Yes, AMD did report customer concentration in FY22. AMD disclosed that in 2022, their largest customer accounted for approximately 13% of net revenue. This is a standard disclosure that semiconductor companies make in their annual reports to highlight dependency risks on major customers.",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "FB00517",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "I don't know.\n\nTo accurately answer this question, I would need access to Boeing's FY2022 financial statements or annual report (10-K), which would contain a breakdown of revenue by business segment or product category. While I have general knowledge about Boeing's business operations, I don't have the specific revenue percentages by product/service category for FY2022 readily available.",
+        "correct": 0,
+        "faithful": 1
+      },
+      {
+        "id": "FB00678",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "Gross margin is **not a particularly useful metric** for Boeing, and here's why:\n\n1. **Contract Accounting Complexity**: Boeing uses percentage-of-completion accounting for long-term defense and commercial contracts. Gross margin can be distorted by timing of revenue recognition, contract changes, and cost estimates that may be revised significantly over a contract's life.\n\n2. **Mix of Business Models**: Boeing operates across defense contracts (often fixed-price), commercial aircraft (high upfront costs, long production cycles), and services. These have vastly different margin profiles and don't blend meaningfully into a single gross margin figure.\n\n3. **Better Metrics Exist**: For Boeing, operating margin, free cash flow, and contract-level profitability are more revealing. Gross margin obscures critical information about overhead absorption, manufacturing efficiency, and contract performance.\n\n4. **Post-737 MAX Context**: Rather than gross margin, investors should focus on unit economics for the 737 MAX and 787 Dreamliner, cumulative losses on specific programs, and cash burn\u2014metrics that reveal actual business health better than a blended gross margin.\n\nIf you're evaluating Boeing's 2022 performance, look at operating margin trends, segment profitability, and free cash flow instead.",
+        "correct": 0,
+        "faithful": 1
+      }
+    ],
+    "n": 17,
+    "correct": 2,
+    "faithful": 14,
+    "acc": 0.11764705882352941,
+    "faith": 0.8235294117647058
+  },
+  "claude_rag": {
+    "rows": [
+      {
+        "id": "L3",
+        "doc": "apple",
+        "bucket": "lookup",
+        "answer": "According to Item 2. Properties in the 2024 Form 10-K, Apple's corporate headquarters is located in **Cupertino, California**. The specific address is One Apple Park Way, Cupertino, California 95014.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M3",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Based on the \"Operating Expenses\" section of Apple's 2024 Form 10-K:\n\n**Research and Development (R&D):**\n- Increased by $1.455 billion (5% growth) from $29.915 billion in 2023 to $31.370 billion in 2024\n- **Driver:** Growth was driven primarily by increases in headcount-related expenses\n\n**Selling, General and Administrative (SG&A):**\n- Increased by $1.165 billion (5% growth) from $24.932 billion in 2023 to $26.097 billion in 2024\n- **Driver:** The document states the expense increased $1.2 billion during 2024 compared to 2023, but does not specify what drove this increase",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M5",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "According to the \"Product, Service and Software Announcements\" section of Apple's 2024 Form 10-K, the new hardware products announced in the Fourth Quarter 2024 were:\n\n\u2022 iPhone 16, iPhone 16 Plus, iPhone 16 Pro and iPhone 16 Pro Max\n\u2022 Apple Watch Series 10\n\u2022 AirPods 4",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M6",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Based on the \"Products and Services Performance\" section of the 2024 Form 10-K:\n\nServices net sales increased during fiscal 2024 compared to 2023 due primarily to higher net sales from **advertising, the App Store, and cloud services**.\n\nThe Services revenue grew 13% year-over-year, from $85,200 million in fiscal 2023 to $96,169 million in fiscal 2024.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M7",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "According to the document, Apple's effective tax rate in fiscal 2024 (24.1%) was higher than in 2023 (14.7%) due primarily to:\n\n1. **A one-time income tax charge of $10.2 billion, net, related to the State Aid Decision** - resulting from the European Court of Justice's September 10, 2024 decision confirming the Commission's 2016 State Aid Decision regarding Apple's Irish tax arrangements.\n\n2. **A higher effective tax rate on foreign earnings**\n\n3. **Lower tax benefits from share-based compensation**\n\n(Source: \"Provision for Income Taxes\" section of the 2024 Form 10-K)",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M9",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "Based on the \"Recent Accounting Pronouncements\" section of Apple's 2024 Form 10-K, Apple will adopt two new accounting standards:\n\n1. **ASU 2023-09 (Income Taxes)**: Apple will adopt this standard in its **fourth quarter of 2026** using a prospective transition method. This standard will require additional income tax disclosures including specified information in the income tax rate reconciliation and disaggregation of income taxes paid by federal, state, and foreign taxes.\n\n2. **ASU 2023-07 (Segment Reporting)**: Apple will adopt this standard in its **fourth quarter of 2025** using a retrospective transition method. This standard will require disclosure of the title and position of the chief operating decision maker and how segment profit or loss information is used in assessing performance and allocating resources.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "M10",
+        "doc": "apple",
+        "bucket": "multi_section",
+        "answer": "According to the \"Quantitative and Qualitative Disclosures About Market Risk\" section (Item 7A):\n\n**Measurement Method:** Apple applies a value-at-risk (\"VAR\") model to measure foreign exchange risk on its derivative positions.\n\n**Maximum One-Day Loss:** Based on the VAR model with 95% confidence, Apple estimates a maximum one-day loss in fair value of:\n- **$538 million** as of September 28, 2024\n- **$669 million** as of September 30, 2023",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "N6",
+        "doc": "apple",
+        "bucket": "numeric_table",
+        "answer": "According to the Consolidated Statements of Cash Flows section, cash generated by operating activities in fiscal 2024 (year ended September 28, 2024) was **$118,254 million**.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BL1",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "Per the 2024 10-K, Berkshire Hathaway's named executive officers and their roles are:\n\n1. **Warren E. Buffett** \u2013 Chairman and Chief Executive Officer\n2. **Gregory E. Abel** \u2013 Vice Chairman \u2013 Non-Insurance Operations\n3. **Ajit Jain** \u2013 Vice Chairman \u2013 Insurance Operations\n4. **Marc D. Hamburg** \u2013 Senior Vice President \u2013 Chief Financial Officer\n\n(Section: \"Executive Officers of the Registrant\")",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BL4",
+        "doc": "berkshire",
+        "bucket": "lookup",
+        "answer": "According to the Consolidated Statements of Earnings in the document, Berkshire Hathaway's total revenues for the year ended December 31, 2024 were **$371,433 million** (or approximately **$371.4 billion**).\n\nThis total comprised:\n- Insurance and Other revenues: $321,643 million\n- Railroad, Utilities and Energy revenues: $49,790 million",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM1",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Based on the context provided:\n\n**Insurance Subsidiaries Making Up Berkshire's Underwriting Business:**\n\nBerkshire's insurance underwriting operations include three main groups:\n\n1. **GEICO** - Government Employees Insurance Company and related insurance entities\n2. **Berkshire Hathaway Primary Group** - includes BHSI, RSUI, CapSpecialty, NICO Primary, BHHC, MedPro, MLMIC, USLI, GUARD, and BH Direct\n3. **Berkshire Hathaway Reinsurance Group** - includes NICO Group, General Re Group, and TransRe Group\n\n**Long-Term Underwriting Goal:**\n\n\"Berkshire expects to achieve an underwriting profit over time and that its managers will reject inadequately priced risks\" (from the Insurance section). \n\nMore specifically: \"We strive to generate pre-tax underwriting earnings (defined as premiums earned less insurance losses/benefits incurred and underwriting expenses) over the long term in all business categories, except in our retroactive reinsurance and periodic payment annuity businesses.\"",
+        "correct": 0,
+        "faithful": 0
+      },
+      {
+        "id": "BM5",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Based on the 2024 chairman's letter, the disclosure about the five Japanese trading-company investments and matched yen-denominated borrowings includes:\n\n**Investments:**\n- Aggregate cost: $13.8 billion\n- Market value at yearend: $23.5 billion\n- Holdings intended for the very long term\n- Berkshire committed to keep holdings below 10% of each company's shares, though the five companies agreed to moderately relax this ceiling\n\n**Yen-Denominated Borrowings:**\n- Berkshire has consistently increased yen-denominated borrowings, all at fixed rates (no \"floaters\")\n- Purpose: to achieve currency-neutrality, as the chairman and Greg have no view on future foreign exchange rates\n- GAAP requires recognition of gains/losses on borrowed yen in earnings\n- At yearend: $2.3 billion of after-tax gains due to dollar strength, with $850 million occurring in 2024\n\n**Strategy:**\nThe chairman states: \"We like the current math of our yen-balanced strategy\" and expects successors will hold this Japanese position for many decades.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "BM6",
+        "doc": "berkshire",
+        "bucket": "multi_section",
+        "answer": "Based on the context provided, Berkshire discloses the following regulatory and coal-revenue exposures for BNSF:\n\n**Regulatory Exposures:**\n- Subject to federal, state, and local laws and regulations covering rates, practices, taxes, railroad operations, health, safety, labor, environmental and other matters\n- Regulated by the Surface Transportation Board (STB), Federal Railroad Administration (DOT), OSHA, EPA, and other federal and state agencies\n- Required to comply with extensive environmental regulations covering discharges, air emissions, toxic substances, and hazardous materials transportation\n- Failure to comply could have material adverse effects on BNSF's business\n- Changes in legislative and regulatory frameworks may impose significant operating and implementation risks and require significant capital expenditures (Section: \"Regulatory Matters\")\n\n**Coal-Revenue Exposures:**\n- BNSF derives significant amounts of revenue from transportation of energy-related commodities, particularly coal\n- Changes in government policies limiting or restricting coal usage as a fuel source or promoting alternate fuels (such as natural gas) could adversely affect revenues and earnings\n- Operating revenues from coal decreased 22.5% to $2.9 billion in 2024 compared to 2023, with volume decrease of 17.9% primarily due to lower natural gas prices (Section: \"Management's Discussion and Analysis\")",
+        "correct": 1,
+        "faithful": 0
+      },
+      {
+        "id": "FB01279",
+        "doc": "amd",
+        "bucket": "numeric_table",
+        "answer": "Based on the Consolidated Statements of Cash Flows for FY22 (year ended December 31, 2022):\n\n**Operating activities brought in the most cash flow.**\n\n- Operating activities: $3,565 million (net cash provided)\n- Investing activities: $940 million (net cash provided)\n- Financing activities: The document shows \"Net cash used in financing activities was $3.3 billion in 2022\" (net cash used, not provided)\n\nOperating activities generated $3.6 billion, which exceeded investing activities' $940 million and financing activities' negative $3.3 billion outflow.",
+        "correct": 1,
+        "faithful": 0
+      },
+      {
+        "id": "FB00757",
+        "doc": "amd",
+        "bucket": "multi_section",
+        "answer": "Yes, AMD reported customer concentration in FY22. According to the document:\n\n\"One customer accounted for 16% of our consolidated net revenue for the year ended December 31, 2022. Sales to this customer consisted of sales of products from our Gaming segment.\"\n\nAdditionally, AMD notes in the Risk Factors section: \"We depend on a small number of customers for a substantial portion of our business and we expect that a small number of customers will continue to account for a significant part of our revenue in the future.\"",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00517",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "Yes. Based on the \"Revenues\" section in the document, for FY2022:\n\n- **Commercial Airplanes (BCA)**: $25,867 million = **39% of total company revenues**\n- **Defense, Space & Security (BDS)**: $23,162 million = **35% of total company revenues**\n\nBoth product categories represent more than 20% of Boeing's FY2022 revenue.",
+        "correct": 1,
+        "faithful": 1
+      },
+      {
+        "id": "FB00678",
+        "doc": "boeing",
+        "bucket": "multi_section",
+        "answer": "Based on the provided context, **gross margin is not a useful metric for Boeing as of FY2022.**\n\nAccording to the document, Boeing operated at a loss in FY2022 with:\n- **GAAP Operating margins: (5.3)%**\n- **Core operating margins: (7.0)%**\n\nThe context explains that Boeing uses **program-level gross profit margins** rather than company-wide gross margin as the relevant metric. For the major commercial aircraft programs as of December 31, 2022:\n- **767, 777X, and 787 programs had \"near break-even or single digit margins\"** (per the Results of Operations section)\n\nThe document indicates these programs are subject to significant financial risk, with potential for \"additional reach-forward losses in future periods, which may be material.\" This is due to factors like production disruptions, supply chain issues, delivery delays, and customer considerations.\n\nRather than improving, the context suggests margin pressure persists, particularly for development programs, making company-wide gross margin an inadequate measure of Boeing's financial performance. Program accounting quantity and reach-forward loss analysis are the more meaningful metrics for assessing profitability in this capital-intensive, long-cycle business model.",
+        "correct": 0,
+        "faithful": 0
+      }
+    ],
+    "n": 17,
+    "correct": 15,
+    "faithful": 13,
+    "acc": 0.8823529411764706,
+    "faith": 0.7647058823529411
+  }
+}
