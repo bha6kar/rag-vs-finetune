@@ -137,6 +137,23 @@ Two honest limits. The local fine-tune ran on Qwen2.5-7B, not gpt-5.4-mini, so t
 
 ---
 
+## Appendix: I then tried to prove fine-tuning wins at format. It didn't.
+
+The knowledge result is one-sided, so I went looking for the other half of the argument: the behavioural case where fine-tuning should clearly beat a prompt. The obvious one is strict output format. I made the same model answer the held-out questions *with* retrieved context but forced to emit a rigid JSON object (answer, figure, unit, period, section, confidence) and nothing else: no prose, no markdown fences. I scored two conditions, prompt-only and fine-tuned, on schema adherence (strict: the raw output must parse, exact keys, valid enum) and answer correctness.
+
+![Strict JSON format: a good prompt already aces it](./images/format_results.png)
+
+| Condition | Schema adherence | Correctness |
+|---|---|---|
+| Qwen2.5-7B + RAG, prompt-only | 100% | 88% |
+| Qwen2.5-7B + RAG, fine-tuned for the schema | 94% | 71% |
+
+The experiment refused to cooperate, and that is the lesson. A modern 7B instruct model already produced valid schema JSON on every single held-out question from a prompt alone. Fine-tuning on 228 format examples did not improve adherence: it *lowered* it (one fine-tuned answer wrapped an inner quote without escaping it and broke the JSON, a mistake the base model never made), and it cost six points of correctness as the adapter nudged the model off its extraction behaviour.
+
+So the headline I expected, "fine-tuning wins at format," did not replicate. The real finding is more useful and it is exactly step 0 of this guide: prove a prompt cannot do the job before you fine-tune, because for a capable model and a standard format, the prompt usually can, and a fine-tune can quietly make things worse. This does not mean fine-tuning never helps behaviour. It means its edge lives at harder targets than clean JSON on a strong model: a tone a prompt cannot pin down, an exotic or proprietary format, a base model that genuinely fumbles structure, or very high volume where you have *measured* the prompt failing. I had not measured a failure, so I had no business fine-tuning. Neither do you, until you have.
+
+---
+
 ## References
 
 1. Ovadia, Brief, Mishaeli, Elisha. "Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs." EMNLP 2023. [arxiv 2312.05934](https://arxiv.org/abs/2312.05934)

@@ -8,3 +8,7 @@ work/mlx_adapter/
 work/mlx/
 work/openai/
 work/*.log
+work/fmt/
+work/fmt_adapter/
+work/*_adapter/
+*.safetensors

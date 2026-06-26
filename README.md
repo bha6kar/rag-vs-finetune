@@ -26,6 +26,17 @@ Read-out:
 
 The fine-tune got a genuine, well-resourced attempt and still lost to retrieval by a wide margin on the same model. Fine-tune for behaviour and format; retrieve for what the model needs to know.
 
+## The behavioural test (where fine-tuning was supposed to win)
+
+To check the other half of the thesis, I ran a strict-output-format task: the same model answering with RAG context but forced to emit a rigid JSON schema, scored on adherence (strict parse, exact keys) and correctness.
+
+| Condition | Schema adherence | Correctness |
+|---|---|---|
+| Qwen2.5-7B + RAG, prompt-only | 100% | 88% |
+| Qwen2.5-7B + RAG, fine-tuned for the schema | 94% | 71% |
+
+The expected win did not appear: a capable instruct model already hit 100% strict-JSON adherence from a prompt, and fine-tuning slightly lowered both metrics. The lesson is the gate, not a fine-tune: prove a prompt cannot do the job before you train. Fine-tuning's behavioural edge is real, but it lives at harder targets than clean JSON on a strong model. Scripts: `make_format_data.py`, `train_format.py`, `eval_format.py`; result in `work/format_results.json`.
+
 ## What it does
 
 The fine-tune trains the open model closed-book (question to ground-truth answer, no context) on 513 question/answer pairs generated from the document chunks (see `make_synthetic_data.py`), then scores the 17 held-out questions across seven conditions, all graded by the same gpt-5.4-mini judge on correctness and faithfulness. RAG uses the same retrieved context the bake-off's tuned pipeline used, so any model's RAG condition is directly comparable, and both fine-tuning and RAG draw on the same document content. The open model is Qwen2.5-7B-Instruct, run locally (LoRA fine-tune and inference) via MLX on Apple Silicon; the hosted models go through Azure OpenAI (judge and gpt-5.4-mini) and OpenRouter (Claude).

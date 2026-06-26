@@ -1,0 +1,258 @@
+{
+  "fmt_base": {
+    "n": 17,
+    "adherence": 1.0,
+    "correct": 0.8823529411764706,
+    "adh_count": 17,
+    "cor_count": 15,
+    "rows": [
+      {
+        "id": "L3",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Cupertino, California\", \"figure\": null, \"unit\": null, \"period\": null, \"section\": \"Item 2. Properties\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "M3",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\n  \"answer\": \"R&D expense increased by 5% in 2024 compared to 2023, driven primarily by increases in headcount-related expenses. Selling, general and administrative expense increased by $1.2 billion, or 5%, in 2024 compared to 2023.\",\n  \"figure\": null,\n  \"unit\": null,\n  \"period\": null,\n  \"section\":"
+      },
+      {
+        "id": "M5",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"iPhone 16, iPhone 16 Plus, iPhone 16 Pro and iPhone 16 Pro Max; Apple Watch Series 10; and AirPods 4.\", \"figure\": null, \"unit\": null, \"period\": \"fourth quarter of fiscal 2024\", \"section\": \"Product, Service and Software Announcements\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "M6",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\n  \"answer\": \"The Services revenue growth in fiscal 2024 was driven primarily by higher net sales from advertising, the App Store \u00ae and cloud services.\",\n  \"figure\": null,\n  \"unit\": null,\n  \"period\": null,\n  \"section\": \"Services\",\n  \"confidence\": \"high\"\n}"
+      },
+      {
+        "id": "M7",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Apple's effective tax rate in fiscal 2024 was higher than in 2023 due primarily to a one-time income tax charge of $10.2 billion, net, related to the State Aid Decision, a higher effective tax rate on foreign earnings and lower tax benefits from share-based compensation.\", \"figure\": null"
+      },
+      {
+        "id": "M9",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\n  \"answer\": \"Apple will adopt ASU 2023-09 in its fourth quarter of 2026 using a prospective transition method and ASU 2023-07 in its fourth quarter of 2025 using a retrospective transition method.\",\n  \"figure\": null,\n  \"unit\": null,\n  \"period\": null,\n  \"section\": \"Recent Accounting Pronouncements\""
+      },
+      {
+        "id": "M10",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Apple measures foreign exchange risk on its derivative positions using a value-at-risk (VAR) method. The disclosed maximum one-day loss is $669 million as of September 30, 2023, and $538 million as of September 28, 2024.\", \"figure\": null, \"unit\": null, \"period\": null, \"section\": \"Item 7A"
+      },
+      {
+        "id": "N6",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"118,254\", \"figure\": \"118,254\", \"unit\": \"million\", \"period\": \"fiscal 2024\", \"section\": \"CONSOLIDATED STATEMENTS OF CASH FLOWS\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "BL1",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\n  \"answer\": \"Warren E. Buffett is Chairman and CEO; Gregory E. Abel is Vice Chairman \u2013 Non-Insurance Operations; Ajit Jain is Vice Chairman \u2013 Insurance Operations; Marc D. Hamburg is Senior Vice-President \u2013 Chief Financial Officer.\",\n  \"figure\": null,\n  \"unit\": null,\n  \"period\": null,\n  \"section\":"
+      },
+      {
+        "id": "BL4",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"371,433\", \"figure\": \"371,433\", \"unit\": \"million dollars\", \"period\": \"Year Ended December 31, 2024\", \"section\": \"BERKSHIRE HATHAWAY INC. and Subsidiaries CONSOLIDATED STATEMENTS OF EARNINGS (dollars in millions except per share amounts)\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "BM1",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Berkshire\u2019s underwriting business includes GEICO, Berkshire Hathaway Primary Group, and Berkshire Hathaway Reinsurance Group. The long-term underwriting goal is to achieve an underwriting profit over time and to reject inadequately priced risks.\", \"figure\": null, \"unit\": null, \"period\": "
+      },
+      {
+        "id": "BM5",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"The annual dividend income expected from the Japanese investments in 2025 will total 5,566 Japanese Yen. Berkshire has matched these investments with yen-denominated borrowings, aiming for a currency-neutral strategy.\", \"figure\": \"5,566\", \"unit\": \"Japanese Yen\", \"period\": \"2025\", \"sectio"
+      },
+      {
+        "id": "BM6",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"BNSF is subject to federal, state, and local laws and regulations generally applicable to its businesses. It is also exposed to risks related to the transportation of hazardous materials and environmental regulations. Coal revenues could be adversely affected if government policies limit"
+      },
+      {
+        "id": "FB01279",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Operating activities\", \"figure\": 3565, \"unit\": \"million\", \"period\": \"Year Ended December 31, 2022\", \"section\": \"Consolidated Statements of Cash Flows\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "FB00757",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Yes\", \"figure\": null, \"unit\": null, \"period\": \"FY22\", \"section\": \"Customer concentration\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "FB00517",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Yes\", \"figure\": null, \"unit\": null, \"period\": \"2022\", \"section\": \"Revenues\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "FB00678",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"Not in document\", \"figure\": null, \"unit\": null, \"period\": null, \"section\": null, \"confidence\": \"low\"}"
+      }
+    ]
+  },
+  "fmt_ft": {
+    "n": 17,
+    "adherence": 0.9411764705882353,
+    "correct": 0.7058823529411765,
+    "adh_count": 16,
+    "cor_count": 12,
+    "rows": [
+      {
+        "id": "L3",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Cupertino, California\", \"figure\": null, \"unit\": null, \"period\": \"As of September 28, 2024\", \"section\": \"Item 2. Properties\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "M3",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"R&D expense increased by $1.4 billion, or 14%, and SG&A expense increased by $1.1 billion, or 5%. The growth in R&D expense during 2024 compared to 2023 was driven primarily by increases in headcount-related expenses. \", \"figure\": null, \"unit\": null, \"period\": \"2024 vs 2023\", \"section\": "
+      },
+      {
+        "id": "M5",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"iPhone 16, iPhone 16 Plus, iPhone 16 Pro and iPhone 16 Pro Max\", \"figure\": null, \"unit\": null, \"period\": \"Fourth Quarter 2024\", \"section\": \"Product, Service and Software Announcements\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "M6",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Services revenue increased during 2024 compared to 2023 due primarily to higher net sales from advertising, the App Store and cloud services.\", \"figure\": null, \"unit\": null, \"period\": \"2024 compared to 2023\", \"section\": \"Products and Services Performance\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "M7",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"A one-time income tax charge of $10.2 billion, net, related to the State Aid Decision, a higher effective tax rate on foreign earnings, and lower tax benefits from share-based compensation.\", \"figure\": \"24.1%\", \"unit\": \"Effective tax rate\", \"period\": \"2024\", \"section\": \"Provision for Inc"
+      },
+      {
+        "id": "M9",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"ASU 2023-09 will be adopted in the fourth quarter of 2026 using a prospective transition method, and ASU 2023-07 will be adopted in the fourth quarter of 2025 using a retrospective transition method.\", \"figure\": null, \"unit\": null, \"period\": null, \"section\": \"Recent Accounting Pronouncem"
+      },
+      {
+        "id": "M10",
+        "adherent": 0,
+        "reason": "invalid JSON: Expecting ',' delimiter: line 1 column 42 (char 41)",
+        "correct": 1,
+        "raw": "{\"answer\": \"Apple uses a value-at-risk (\"VAR\") measure for foreign exchange risk on its derivative positions, and the maximum one-day loss is disclosed as $538 million as of September 28, 2024, and $669 million as of September 30, 2023.\", \"figure\": \"538\", \"unit\": \"million\", \"period\": \"September 28, "
+      },
+      {
+        "id": "N6",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"118,254\", \"figure\": \"118254\", \"unit\": \"million\", \"period\": \"Year ended September 28, 2024\", \"section\": \"Consolidated Statements of Cash Flows\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "BL1",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Warren E. Buffett is Chairman and CEO; Gregory E. Abel is Vice Chairman \u2013 Non-Insurance Operations; Ajit Jain is Vice Chairman \u2013 Insurance Operations; Marc D. Hamburg is Senior Vice-President \u2013 Chief Financial Officer.\", \"figure\": null, \"unit\": null, \"period\": null, \"section\": \"Executive"
+      },
+      {
+        "id": "BL4",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"371,433\", \"figure\": \"371433\", \"unit\": \"million dollars\", \"period\": \"Year ended December 31, 2024\", \"section\": \"Consolidated Statements of Earnings\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "BM1",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"GEICO, Berkshire Hathaway Primary Group (\u201cBH Primary\u201d) and Berkshire Hathaway Reinsurance Group (\u201cBHRG\u201d). Berkshire strives to generate pre-tax underwriting earnings over the long term in all business categories, except in its retroactive reinsurance and periodic payment annuity business"
+      },
+      {
+        "id": "BM5",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"The annual dividend income expected from the five Japanese investments in 2025 will total $4,733 million.\", \"figure\": \"4733\", \"unit\": \"million\", \"period\": \"2025\", \"section\": \"Japanese investments\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "BM6",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"BNSF is subject to federal, state and local laws and regulations generally applicable to its businesses. Rail operations are subject to the regulatory jurisdiction of the Surface Transportation Board (\u201cSTB\u201d), the Federal Railroad Administration of the U.S. Department of Transportation (\u201c"
+      },
+      {
+        "id": "FB01279",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"Net cash provided by operating activities was $3.565 billion in 2022.\", \"figure\": \"3565\", \"unit\": \"million\", \"period\": \"Year Ended December 31, 2022\", \"section\": \"Consolidated Statements of Cash Flows\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "FB00757",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 1,
+        "raw": "{\"answer\": \"One customer accounted for 16% of our consolidated net revenue for the year ended December 31, 2022.\", \"figure\": null, \"unit\": null, \"period\": \"year ended December 31, 2022\", \"section\": \"Risk Factors\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "FB00517",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"Yes, Commercial Airplanes (BCA) represented more than 20% of Boeing\u2019s revenue for FY2022.\", \"figure\": \"25,867\", \"unit\": \"million dollars\", \"period\": \"Years ended December 31, 2022\", \"section\": \"Revenues\", \"confidence\": \"high\"}"
+      },
+      {
+        "id": "FB00678",
+        "adherent": 1,
+        "reason": "ok",
+        "correct": 0,
+        "raw": "{\"answer\": \"The gross margin profile improved for the 777X and 787 programs, but the overall gross margin for these programs remained near break-even or single digit margins at December 31, 2022.\", \"figure\": \"7\", \"unit\": \"percentage\", \"period\": \"December 31, 2022\", \"section\": \"Results of Operations\""
+      }
+    ]
+  }
+}
