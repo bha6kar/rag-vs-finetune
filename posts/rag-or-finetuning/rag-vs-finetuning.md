@@ -80,7 +80,7 @@ Before my own numbers, here is the established picture from published practice. 
 
 ## I fine-tuned a model and put it head to head with RAG
 
-That is the theory. Here is what happened when I ran it. I took the 54 finance questions, split them into 37 for training and 17 held out for testing, and fine-tuned an open model (Qwen2.5-7B) closed-book: question in, the ground-truth answer out, with no retrieved context, trying to push the document knowledge into the weights. Then I scored the held-out 17 questions across seven conditions, all graded by the same gpt-5.4-mini judge on the same two criteria, correct and faithful.
+That is the theory. Here is what happened when I ran it. I held out 17 of the 54 finance questions for testing and fine-tuned an open model (Qwen2.5-7B) closed-book on question/answer pairs drawn from the documents: question in, the ground-truth answer out, with no retrieved context, trying to push the document knowledge into the weights (corpus details below). Then I scored the held-out 17 questions across seven conditions, all graded by the same gpt-5.4-mini judge on the same two criteria, correct and faithful.
 
 ![Measured: retrieve into context versus fine-tune into weights](./images/experiment_results.png)
 
@@ -183,7 +183,7 @@ For the fine-tuning head-to-head:
 - Conditions scored: RAG with the *same* retrieved context for three models (the tuned gpt-5.4-mini pipeline, Claude Haiku 4.5, and Qwen2.5-7B), plus gpt-5.4-mini, Claude Haiku, base Qwen, and fine-tuned Qwen all answering closed-book. Same judge, same two criteria, as the retrieval eval.
 - Claude has no fine-tuned condition because Anthropic does not offer fine-tuning of Claude.
 
-The retrieval bake-off (per-question runs, judge prompt, build and eval scripts) is at [github.com/bha6kar/rag-bake-off](https://github.com/bha6kar/rag-bake-off). The fine-tuning head-to-head (training, the six-condition eval, and the full per-question results) is in its own repository: [github.com/bha6kar/rag-vs-finetune](https://github.com/bha6kar/rag-vs-finetune).
+The retrieval bake-off (per-question runs, judge prompt, build and eval scripts) is at [github.com/bha6kar/rag-bake-off](https://github.com/bha6kar/rag-bake-off). The fine-tuning head-to-head (training, the seven-condition eval, the behavioural format test, and the full per-question results) is in its own repository: [github.com/bha6kar/rag-vs-finetune](https://github.com/bha6kar/rag-vs-finetune).
 
 ---
 

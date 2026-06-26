@@ -14,7 +14,7 @@ In the first article I ran a fairly exhaustive retrieval benchmark: ten pipeline
 
 I am opening the fine-tuning guide with that on purpose. The most common fine-tuning mistake is not a bad learning rate or a wrong rank. It is fine-tuning at all, to solve a problem that retrieval already solves for a fraction of a cent. Before you curate a single training example, you should be able to say, out loud, what your fine-tune will do that a tuned RAG baseline plus a good prompt cannot.
 
-One honesty note that carries over from part one: I benchmarked the RAG side, I did not benchmark a fine-tune on these documents. So the RAG figures below are measured; the fine-tuning guidance is drawn from established practice and the research literature. I flag which is which throughout. I would rather hand you an honest method than a fake leaderboard.
+One honesty note that carries over from part one: the RAG figures here are measured. The step-by-step method below is informed by established practice and the research literature, but I also ran the fine-tune myself on these documents, twice, and the measured head-to-head is in the appendix. I flag which numbers are measured and which are general guidance throughout. I would rather hand you an honest method than a fake leaderboard.
 
 ---
 
