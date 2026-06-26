@@ -55,16 +55,17 @@ def main() -> None:
     OUT_MD.write_text("\n".join(lines) + "\n")
     print("wrote", OUT_MD)
 
-    # Chart: grouped bars, accuracy + faithfulness
+    # Chart: grouped bars, correctness + faithfulness. Two fixed colours so the
+    # legend matches every bar (one colour = correct, one = faithful).
+    CORRECT_C = "#0f766e"   # teal-700
+    FAITHFUL_C = "#5eead4"  # teal-300
     fig, ax = plt.subplots(figsize=(11, 0.9 * len(present) + 2))
     ys = range(len(present))
     accs = [store[c]["acc"] * 100 for c in present]
     faiths = [store[c]["faith"] * 100 for c in present]
     h = 0.38
-    ax.barh([y + h / 2 for y in ys], accs, height=h,
-            color=[COLORS[c] for c in present], label="Correct %")
-    ax.barh([y - h / 2 for y in ys], faiths, height=h,
-            color=[COLORS[c] for c in present], alpha=0.45, label="Faithful %")
+    ax.barh([y + h / 2 for y in ys], accs, height=h, color=CORRECT_C, label="Correct %")
+    ax.barh([y - h / 2 for y in ys], faiths, height=h, color=FAITHFUL_C, label="Faithful %")
     for y, c in zip(ys, present):
         ax.text(store[c]["acc"] * 100 + 1, y + h / 2,
                 f"{store[c]['acc']:.0%}", va="center", fontsize=10, color=INK, fontweight="bold")
